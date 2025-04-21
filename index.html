@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor Fusion - Custom Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>Flavor Fusion</h1>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" id="closeMenu"></i>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cuisines">Cuisines</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-icons">
+                    <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#"><i class="fas fa-user"></i></a>
+                </div>
+                <i class="fas fa-bars" id="openMenu"></i>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero" style="background-image: url('assets/background-main.jpg'); background-size: cover;">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2>Customize Your Perfect Meal</h2>
+                <p>Explore delicious cuisines from around the world and personalize your order with our interactive menu system.</p>
+                <a href="#cuisines" class="btn">Explore Cuisines</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="cuisines" class="cuisine-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Cuisine</h2>
+            <div class="cuisine-layout">
+                <div class="chef-image">
+                    <img src="assets/chef.png" alt="Chef">
+                </div>
+                <div class="cuisine-grid">
+                    <div class="cuisine-card" data-cuisine="indian">
+                        <div class="cuisine-img">
+                            <img src="/assets/indianCuisine.jpg" alt="Indian Cuisine">
+                        </div>
+                        <div class="cuisine-info">
+                            <h3>Indian Cuisine</h3>
+                            <p>Explore the rich flavors and vibrant spices of authentic Indian food.</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="cuisine-card" data-cuisine="chinese">
+                        <div class="cuisine-img">
+                            <img src="/assets/Chinese-Cuisine.jpg" alt="Chinese Cuisine">
+                        </div>
+                        <div class="cuisine-info">
+                            <h3>Chinese Cuisine</h3>
+                            <p>Savor the delicious and diverse flavors of traditional Chinese dishes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cuisine-card" data-cuisine="continental">
+                        <div class="cuisine-img">
+                            <img src="/assets/continental.webp" alt="Continental Cuisine">
+                        </div>
+                        <div class="cuisine-info">
+                            <h3>Continental Cuisine</h3>
+                            <p>Enjoy the elegant and refined tastes of European continental cuisine.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cuisine-card" data-cuisine="italian">
+                        <div class="cuisine-img">
+                            <img src="/assets/italian.jpg" alt="Italian Cuisine">
+                        </div>
+                        <div class="cuisine-info">
+                            <h3>Italian Cuisine</h3>
+                            <p>Indulge in the rich and savory flavors of authentic Italian dishes, from pasta to pizza and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Menu Items</h2>
+            <div class="menu-items" id="indian-menu" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/butterchicken.jpg" alt="Butter Chicken">
+                    </div>
+                    <div class="item-info">
+                        <h4>Butter Chicken</h4>
+                        <p>Tender chicken in a rich tomato and butter sauce</p>
+                        <div class="item-price">$14.99</div>
+                        <button class="customize-btn" data-item="Butter Chicken" data-price="14.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/pannerTikka.jpg" alt="Paneer Tikka Masala">
+                    </div>
+                    <div class="item-info">
+                        <h4>Paneer Tikka Masala</h4>
+                        <p>Paneer cheese in a spiced tomato gravy</p>
+                        <div class="item-price">$12.99</div>
+                        <button class="customize-btn" data-item="Paneer Tikka Masala" data-price="12.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/Vegbiryani.jpg" alt="Vegetable Biryani">
+                    </div>
+                    <div class="item-info">
+                        <h4>Vegetable Biryani</h4>
+                        <p>Fragrant rice with mixed vegetables and spices</p>
+                        <div class="item-price">$10.99</div>
+                        <button class="customize-btn" data-item="Vegetable Biryani" data-price="10.99">Customize</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-items" id="chinese-menu" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/Kung Pao Chicken.jpg" alt="Kung Pao Chicken">
+                    </div>
+                    <div class="item-info">
+                        <h4>Kung Pao Chicken</h4>
+                        <p>Stir-fried chicken with peanuts and vegetables</p>
+                        <div class="item-price">$13.99</div>
+                        <button class="customize-btn" data-item="Kung Pao Chicken" data-price="13.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/spring roll.jpg" alt="Veggie Spring Rolls">
+                    </div>
+                    <div class="item-info">
+                        <h4>Veggie Spring Rolls</h4>
+                        <p>Crispy rolls filled with vegetables</p>
+                        <div class="item-price">$7.99</div>
+                        <button class="customize-btn" data-item="Veggie Spring Rolls" data-price="7.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/fried rice.jpg" alt="Fried Rice">
+                    </div>
+                    <div class="item-info">
+                        <h4>Fried Rice</h4>
+                        <p>Stir-fried rice with vegetables and egg</p>
+                        <div class="item-price">$9.99</div>
+                        <button class="customize-btn" data-item="Fried Rice" data-price="9.99">Customize</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-items" id="continental-menu" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/classic burger.jpg" alt="Classic Burger">
+                    </div>
+                    <div class="item-info">
+                        <h4>Classic Burger</h4>
+                        <p>Beef patty with lettuce, tomato and cheese</p>
+                        <div class="item-price">$12.99</div>
+                        <button class="customize-btn" data-item="Classic Burger" data-price="12.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/Mushroom Risotto.jpg" alt="Mushroom Risotto">
+                    </div>
+                    <div class="item-info">
+                        <h4>Mushroom Risotto</h4>
+                        <p>Creamy rice with assorted mushrooms</p>
+                        <div class="item-price">$14.99</div>
+                        <button class="customize-btn" data-item="Mushroom Risotto" data-price="14.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/grilled-salmon.jpg" alt="Grilled Salmon">
+                    </div>
+                    <div class="item-info">
+                        <h4>Grilled Salmon</h4>
+                        <p>Fresh salmon fillet with herbs and lemon</p>
+                        <div class="item-price">$16.99</div>
+                        <button class="customize-btn" data-item="Grilled Salmon" data-price="16.99">Customize</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-items" id="italian-menu" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/margherita-pizza.jpg" alt="Margherita Pizza">
+                    </div>
+                    <div class="item-info">
+                        <h4>Margherita Pizza</h4>
+                        <p>Classic pizza with tomato sauce, mozzarella, and fresh basil</p>
+                        <div class="item-price">$13.99</div>
+                        <button class="customize-btn" data-item="Margherita Pizza" data-price="13.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/fettuccine-alfredo.webp" alt="Fettuccine Alfredo">
+                    </div>
+                    <div class="item-info">
+                        <h4>Fettuccine Alfredo</h4>
+                        <p>Creamy pasta with parmesan cheese and butter sauce</p>
+                        <div class="item-price">$15.99</div>
+                        <button class="customize-btn" data-item="Fettuccine Alfredo" data-price="15.99">Customize</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-img">
+                        <img src="/assets/Tiramisu.jpg" alt="Tiramisu">
+                    </div>
+                    <div class="item-info">
+                        <h4>Tiramisu</h4>
+                        <p>Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream</p>
+                        <div class="item-price">$8.99</div>
+                        <button class="customize-btn" data-item="Tiramisu" data-price="8.99">Customize</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 30px; text-align: center;">
+                <button id="view-cart-btn" class="btn" style="display: none;">View Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="customization-modal" id="customization-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="customization-options">
+                <h3 id="modal-item-name">Customize Your Item</h3>
+                
+                <div class="option-group">
+                    <h4>Spice Level</h4>
+                    <div class="option-items">
+                        <label><input type="radio" name="spice" value="mild" checked> Mild</label>
+                        <label><input type="radio" name="spice" value="medium"> Medium</label>
+                        <label><input type="radio" name="spice" value="hot"> Hot</label>
+                        <label><input type="radio" name="spice" value="extra-hot"> Extra Hot</label>
+                    </div>
+                </div>
+                
+                <div class="option-group">
+                    <h4>Add-ons</h4>
+                    <div class="option-items">
+                        <label><input type="checkbox" name="addon" value="cheese"> Extra Cheese (+$1.50)</label>
+                        <label><input type="checkbox" name="addon" value="vegetables"> Extra Vegetables (+$1.00)</label>
+                        <label><input type="checkbox" name="addon" value="sauce"> Special Sauce (+$0.75)</label>
+                    </div>
+                </div>
+                
+                <div class="option-group">
+                    <h4>Special Instructions</h4>
+                    <textarea style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" rows="3" placeholder="Any special requests or allergies we should know about?"></textarea>
+                </div>
+                
+                <div class="quantity-selector">
+                    <button class="quantity-btn decrease">-</button>
+                    <input type="text" class="quantity" value="1" readonly>
+                    <button class="quantity-btn increase">+</button>
+                </div>
+                
+                <button class="add-to-cart">Add to Cart - <span id="item-total-price">$14.99</span></button>
+            </div>
+        </div>
+    </div>
+    
+    <section id="cart" class="cart-section">
+        <div class="container">
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-items" id="cart-items-container">
+                <!-- Cart items will be added here dynamically -->
+                <div class="empty-cart" style="text-align: center; padding: 30px;">
+                    <p>Your cart is empty. Add some delicious items!</p>
+                </div>
+            </div>
+            
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="back-to-menu" class="btn" style="background-color: #666;">Back to Menu</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="order-success" class="order-success">
+        <div class="container">
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your order. Your delicious food will be prepared and delivered soon.</p>
+            <p>Order #: <span id="order-number">FL128745</span></p>
+            <a href="#" class="btn" id="new-order-btn">Place Another Order</a>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>Flavor Fusion was established with a passion for bringing diverse culinary experiences to your doorstep. Our team of expert chefs specializes in authentic recipes from around the world, ensuring every dish is prepared with the freshest ingredients and traditional techniques.</p>
+                <p>We believe in customization, allowing you to adjust spice levels, ingredients, and portion sizes to match your exact preferences. Your satisfaction is our priority!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, chennai</p>
+                    <p><i class="fas fa-phone"></i>123-4567-8921</p>
+                    <p><i class="fas fa-envelope"></i> info@flavorfusion.com</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Flavor Fusion</h2>
+                    <p>Customized culinary experiences delivered to your door.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cuisines">Cuisines</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Flavor Fusion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
